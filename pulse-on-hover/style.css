@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  background-color: grey;
+}
+
+.border {
+  background-color: darkblue;
+  height: 10rem;
+  width: 25rem;
+  position: absolute;
+  top: 10rem;
+  left: 33rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: .125rem solid lightblue;
+  border-radius: 1rem;
+  box-shadow:
+  inset 0 0 1rem lightblue,
+  0 0 1rem lightblue;
+}
+
+.border:hover {
+  animation-name: pulse-border;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse-border {
+  from {
+    box-shadow:
+    inset 0 0 1rem lightblue,
+    0 0 1rem lightblue;
+  }
+  50% {
+    box-shadow:
+    inset 0 0 5rem lightblue,
+    0 0 5rem lightblue;
+  }
+  to {
+    box-shadow:
+    inset 0 0 1rem lightblue,
+    0 0 1rem lightblue;
+  }
+}
+
+h2 {
+  color: lightblue;
+  text-shadow: 0 0 1rem lightblue;
+}
+
+h2:hover {
+  animation-name: pulse-text;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse-text {
+  from{
+    text-shadow: 0 0 1rem lightblue;
+  }
+  50% {
+    text-shadow: 0 0 5rem lightblue;
+  }
+  to {
+    text-shadow: 0 0 1rem lightblue;
+  }
+}
